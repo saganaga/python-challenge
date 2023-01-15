@@ -4,6 +4,7 @@ import csv
 
 # Variable declarations
 total_months = 0
+total = 0
 
 # Set path for file
 csvpath = os.path.join(".", "Resources", "budget_data.csv")
@@ -21,9 +22,13 @@ with open(csvpath) as csvfile:
         # set row counter
         row_count = row_count + 1
 
+        # assign total amount of Profits/Losses, convert to integer
+        total = total + int(row[1])
+
     # assign total number of months in dataset
     total_months = row_count
 
 print("Financial Analysis")
 print("-" * 28)
 print(f"Total Months: {row_count}")
+print("Total: $" + str(total))

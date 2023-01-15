@@ -11,9 +11,9 @@ To create a Python script that analyzes the financial records from a financial d
 
 The Python script analyzes the financial records to calculate each of the following values:
 
-    [X] The total number of months included in the dataset
+    [x] The total number of months included in the dataset
 
-    [ ] The net total amount of "Profit/Losses" over the entire period
+    [x] The net total amount of "Profit/Losses" over the entire period
 
     [ ] The changes in "Profit/Losses" over the entire period, and then the average of those changes
 
