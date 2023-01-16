@@ -26,4 +26,25 @@ The Python script analyzes the financial records to calculate each of the follow
 ### Results
 
 ## PyPoll
-TODO
+
+### Purpose
+
+To create a Python script that analyzes the votes from a set of poll data called elction_data.csv
+
+### Overview
+
+The Python script analyzes the poll data to calculate each of the following values:
+
+- [ ] The total number of votes cast
+
+- [ ] A complete list of candidates who received votes
+
+- [ ] The percentage of votes each candidate won
+
+- [ ] The total number of votes each candidate won
+
+- [ ] The winner of the election based on popular vote
+
+### Results
+
+
