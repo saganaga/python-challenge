@@ -11,15 +11,17 @@ To create a Python script that analyzes the financial records from a financial d
 
 The Python script analyzes the financial records to calculate each of the following values:
 
-    [x] The total number of months included in the dataset
+- [x] The total number of months included in the dataset
 
-    [x] The net total amount of "Profit/Losses" over the entire period
+- [x] The net total amount of "Profit/Losses" over the entire period
 
-    [x] The changes in "Profit/Losses" over the entire period, and then the average of those changes
+- [x] The changes in "Profit/Losses" over the entire period, and then the average of those changes
 
-    [ ] The greatest increase in profits (date and amount) over the entire period
+- [ ] The greatest increase in profits (date and amount) over the entire period
 
-    [ ] The greatest decrease in profits (date and amount) over the entire period
+- [ ] The greatest decrease in profits (date and amount) over the entire period
+
+- [x] Export a text file with the results
 
 ### Results
 

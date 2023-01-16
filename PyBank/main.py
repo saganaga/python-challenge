@@ -43,6 +43,7 @@ with open(csvpath) as csvfile:
     # assign total number of months in dataset
     total_months = row_count
 
+# Print to Terminal
 print("Financial Analysis")
 print("-" * 28)
 print(f"Total Months: {row_count}")
@@ -50,3 +51,16 @@ print("Total: $" + str(total))
 print(f"Average Change: ${round(sum(changes)/len(changes),2)}")
 print(f"Greatest Increase in Profits: (date TODO) (${max(changes)})")
 print(f"Greatest Decrease in Profits: (date TODO) (${min(changes)})")
+
+# Specify the file to write to
+output_path = os.path.join(".", "analysis", "output.txt")
+
+# Open the file using "write" mode. Specify the variables to hold the contents
+with open(output_path, 'w') as output:
+    print("Financial Analysis", file = output)
+    print("-" * 28, file = output)
+    print(f"Total Months: {row_count}", file = output)
+    print("Total: $" + str(total), file = output)
+    print(f"Average Change: ${round(sum(changes)/len(changes),2)}", file = output)
+    print(f"Greatest Increase in Profits: (date TODO) (${max(changes)})", file = output)
+    print(f"Greatest Decrease in Profits: (date TODO) (${min(changes)})", file = output)
