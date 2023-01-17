@@ -17,13 +17,15 @@ The Python script analyzes the financial records to calculate each of the follow
 
 - [x] The changes in "Profit/Losses" over the entire period, and then the average of those changes
 
-- [ ] The greatest increase in profits (date and amount) over the entire period
+- [x] The greatest increase in profits (date and amount) over the entire period
 
-- [ ] The greatest decrease in profits (date and amount) over the entire period
+- [x] The greatest decrease in profits (date and amount) over the entire period
 
 - [x] Export a text file with the results
 
 ### Results
+
+For results see the output.txt file in the analysis folder.
 
 ## PyPoll
 
