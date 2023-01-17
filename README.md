@@ -35,16 +35,18 @@ To create a Python script that analyzes the votes from a set of poll data called
 
 The Python script analyzes the poll data to calculate each of the following values:
 
-- [ ] The total number of votes cast
+- [x] The total number of votes cast
 
-- [ ] A complete list of candidates who received votes
+- [x] A complete list of candidates who received votes
 
-- [ ] The percentage of votes each candidate won
+- [x] The percentage of votes each candidate won
 
-- [ ] The total number of votes each candidate won
+- [x] The total number of votes each candidate won
 
-- [ ] The winner of the election based on popular vote
+- [x] The winner of the election based on popular vote
+
+- [x] Export a text file with the results
 
 ### Results
 
-
+For results see the output.txt file in the analysis folder.

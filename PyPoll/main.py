@@ -4,6 +4,7 @@ import csv
 
 # Variable declarations
 total_votes = 0
+candidate_vote_totals = dict()
 
 # Set path for file
 csvpath = os.path.join(".", "Resources", "election_data.csv")
@@ -22,19 +23,35 @@ with open(csvpath) as csvfile:
             # set row counter
             row_count = row_count + 1
 
+            candidate = row[2]
+            # Is the candidate in the dictionary?
+            if candidate in candidate_vote_totals:
+                # If yes, then add one vote
+                candidate_vote_totals[candidate] = candidate_vote_totals[candidate] + 1
+            else:
+                # Otherwise add them to the dictionary with a vote count of 1
+                candidate_vote_totals[candidate] = 1
+
 # assign total number of votes in dataset
-    total_votes = row_count
+total_votes = row_count
 
 # Print to Terminal
 print("Election Results")
 print("-" * 25)
-print(f"Total Votes: {row_count}")
+print(f"Total Votes: {total_votes}")
 print("-" * 25)
-print(f"Charles Casper Stockham: ")
-print(f"Diana DeGette: ")
-print(f"Raymon Anthony Doane: ")
+winner = None
+max_votes = 0
+
+for candidate in candidate_vote_totals.keys():
+    votes = candidate_vote_totals[candidate]
+    percent = (100.0*votes)/total_votes
+    print(f"{candidate}: {percent:.3f}% ({votes})")
+    if votes > max_votes:
+        winner = candidate
+        max_votes = votes
 print("-" * 25)
-print(f"Winner: ")
+print(f"Winner: {winner}")
 print("-" * 25)
 
 # Specify the file to write to
@@ -44,11 +61,12 @@ output_path = os.path.join(".", "analysis", "output.txt")
 with open(output_path, 'w') as output:
     print("Election Results", file = output)
     print("-" * 25, file = output)
-    print(f"Total Votes: {row_count}", file = output)
+    print(f"Total Votes: {total_votes}", file = output)
     print("-" * 25, file = output)
-    print(f"Charles Casper Stockham: ", file = output)
-    print(f"Diana DeGette: ", file = output)
-    print(f"Raymon Anthony Doane: ", file = output)
+    for candidate in candidate_vote_totals.keys():
+        votes = candidate_vote_totals[candidate]
+        percent = (100.0*votes)/total_votes
+        print(f"{candidate}: {percent:.3f}% ({votes})", file = output)
     print("-" * 25, file = output)
-    print(f"Winner: ", file = output)
+    print(f"Winner: {winner}", file = output)
     print("-" * 25, file = output)
